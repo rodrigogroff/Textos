@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="MVApp.Main" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>Gabinete digital</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/charts/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/forms/uniform.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.cleditor.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine-en.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.validationEngine.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.tagsinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.autosize.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.dualListBox.js"></script>
+<script type="text/javascript" src="js/plugins/forms/jquery.inputlimiter.min.js"></script>
+<script type="text/javascript" src="js/plugins/forms/chosen.jquery.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/plugins/wizard/jquery.form.wizard.js"></script>
+
+<script type="text/javascript" src="js/plugins/uploader/plupload.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html5.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/plupload.html4.js"></script>
+<script type="text/javascript" src="js/plugins/uploader/jquery.plupload.queue.js"></script>
+
+<script type="text/javascript" src="js/plugins/tables/datatable.js"></script>
+<script type="text/javascript" src="js/plugins/tables/tablesort.min.js"></script>
+<script type="text/javascript" src="js/plugins/tables/resizable.min.js"></script>
+
+<script type="text/javascript" src="js/plugins/ui/jquery.tipsy.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.collapsible.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.progress.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.timeentry.min.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.colorpicker.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.jgrowl.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.breadcrumbs.js"></script>
+<script type="text/javascript" src="js/plugins/ui/jquery.sourcerer.js"></script>
+
+<script type="text/javascript" src="js/plugins/jquery.fullcalendar.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.elfinder.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+
+<body>
+<div id="leftSide">    
+    <div class="logo"><a href="Home.aspx"><img src="images/logo.png" alt="" /></a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        v1.0<br />
+    </div>    
+    <div class="sidebarSep mt0"></div>
+    <form action="" class="sidebarSearch">
+        
+        <input type="text" name="search" placeholder="busca cadastro..." id="ac" />
+        <input type="submit" value="" />
+    </form>
+    <div class="sidebarSep"></div>
+    <ul id="menu" class="nav">       
+     
+        <li ><a href="#" title="" class="exp" id="menuAdmin" runat="server" ><span>Administração</span></a>
+            <ul class="sub">
+                <li id="li_Suporte" runat="server"><a href="Suporte.aspx" title="">Suporte</a></li>
+                <%--<li id="li_Folder" runat="server"><a href="Folder.aspx" title="">Arquivos</a></li>--%>
+                <li id="li_AdmUserManut" runat="server"><a href="AdmUserManut.aspx" title="">Novo usuário</a></li>                
+                <li id="li_AdmUserListagem" runat="server"><a href="AdmUserListagem.aspx" title="">Listagem de usuários</a></li>
+                <li id="li_AdmPerfilManut" runat="server"><a href="AdmPerfilManut.aspx" title="">Novo perfil</a></li>
+                <li id="li_AdmPerfilListagem" runat="server"><a href="AdmPerfilListagem.aspx" title="">Listagem de perfis</a></li>
+                <li id="li_AuditUser" runat="server"><a href="AuditUser.aspx" title="">Auditoria usuários</a></li>   
+                <li id="li_AdmStat" runat="server"><a href="AdmStat.aspx" title="">Estatísticas sistema</a></li>   
+                <li id="li_AdmUserTrocaSenha" runat="server" class="last"><a href="AdmUserTrocaSenha.aspx" title="">Troca de senha</a></li>                
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuAgenda" runat="server" ><span>Agenda</span></a>
+            <ul class="sub">
+                <li id="li_AgendaListagem" runat="server"><a href="AgendaListagem.aspx" title="">Listagem</a></li>
+                <li id="li_AgendaManut" runat="server" class="last"><a href="AgendaManut.aspx" title="">Nova agenda</a></li>                
+                <li id="li_AgendaComemora" runat="server"><a href="AgendaComemora.aspx" title="">Datas comemorativas</a></li>
+                <li id="li_AgendaEventos" runat="server"><a href="AgendaEventos.aspx" title="">Feiras</a></li>
+                <li id="li_AgendaTipos" runat="server"><a href="AgendaTipo.aspx" title="">Tipos de agenda</a></li>
+                <li id="li_AgendaFeriados" runat="server"><a href="AgendaFeriado.aspx" title="">Feriados</a></li>                
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuRecado" runat="server" ><span>Recados</span></a>
+            <ul class="sub">
+                <li id="li_RecadoListagem" runat="server"><a href="RecadoListagem.aspx" title="">Listagem</a></li>
+                <li id="li_RecadoManut" runat="server" class="last"><a href="RecadoManut.aspx" title="">Novo recado</a></li>                
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuDemanda" runat="server" ><span>Demandas</span></a>
+            <ul class="sub">
+                <li id="li_DemandaListagem" runat="server"><a href="DemandaListagem.aspx" title="">Listagem</a></li>
+                <li id="li_DemandaManut" runat="server" class="last"><a href="DemandaManut.aspx" title="">Nova demanda</a></li>                
+                <li id="li_DemandaRef" runat="server"><a href="DemandaRefList.aspx" title="">Referências</a></li>                
+            </ul>
+        </li>        
+
+        <li ><a href="#" title="" class="exp" id="menuCadastro" runat="server" ><span>Cadastro</span></a>
+            <ul class="sub">
+                <li id="li_CadListagem" runat="server" ><a href="CadListagem.aspx" title="">Listagem</a></li>
+                <li id="li_CadManut" runat="server" class="last"><a href="CadNovo.aspx" title="">Novo cadastro</a></li>                
+                <li id="li_CadGrupo" runat="server" ><a href="MidiaGrupo.aspx" title="">Grupos econômicos</a></li>
+                <li id="li_CadRamo" runat="server" ><a href="MidiaRamo.aspx" title="">Ramo de atividades</a></li>
+                <li id="li_CadCargo" runat="server" ><a href="CadCargo.aspx" title="">Cargos</a></li>
+                <li id="li_CadPart" runat="server" ><a href="CadPart.aspx" title="">Partidos</a></li> 
+                <li id="li_CadPais" runat="server" ><a href="CadPais.aspx" title="">Países</a></li>
+                <li id="li_CadProf" runat="server" ><a href="CadProf.aspx" title="">Profissão</a></li>
+                <li id="li_CadOrig" runat="server" ><a href="CadOrig.aspx" title="">Origens</a></li>
+                <li id="li_CadCateg" runat="server" ><a href="CadCateg.aspx" title="">Categorias</a></li>                
+                <li id="li_CadImport" runat="server" ><a href="CadImport.aspx" title="">Importar arquivo</a></li>                
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuMidia" runat="server" ><span>Mídia</span></a>
+            <ul class="sub">
+                <li id="li_MidiaListagem" runat="server" ><a href="MidiaListagem.aspx" title="">Listagem</a></li>
+                <li id="li_Midia" runat="server" class="last"><a href="MidiaManut.aspx" title="">Nova mídia</a></li>
+                <li id="li_MidiaAssunto" runat="server" ><a href="MidiaAssunto.aspx" title="">Assuntos</a></li>
+                <li id="li_MidiaTipo" runat="server" ><a href="MidiaTipo.aspx" title="">Tipos de midia</a></li>
+                <li id="li_MidiaTipoProg" runat="server" ><a href="MidiaTipoPrograma.aspx" title="">Programas</a></li>                
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuReg" runat="server" ><span>Municípios</span></a>
+            <ul class="sub">
+                <li id="li_MuniList" runat="server" ><a href="MunicipioListagem.aspx" title="">Listagem municípios</a></li>
+                <li id="li_MuniManut" runat="server" class="last"><a href="MunicipioManut.aspx" title="">Novo município</a></li>
+                <li id="li_RegTipo" runat="server" ><a href="MidiaTipoRegiao.aspx" title="">Macroregiões</a></li>
+                <li id="li_RegList" runat="server" ><a href="MidiaRegioes.aspx" title="">Microregiões</a></li>
+            </ul>
+        </li>
+
+        <li ><a href="#" title="" class="exp" id="menuCamp" runat="server" ><span>Campanha</span></a>
+            <ul class="sub">
+                <li id="li_CampList" runat="server" ><a href="CampanhaListagem.aspx" title="">Listagem de campanhas</a></li>
+                <li id="li_CampManut" runat="server" ><a href="CampanhaManut.aspx" title="">Nova campanha</a></li>
+                <li id="li_CampRecList" runat="server" ><a href="CampRecList.aspx" title="">Receber material</a></li>
+                <li id="li_CampColab" runat="server" ><a href="CampColabList.aspx" title="">Colaborações</a></li>
+                <li id="li_CampMateriais" runat="server" ><a href="CampMatList.aspx" title="">Materiais</a></li>                
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div id="rightSide">
+    <div class="topNav">
+        <div class="wrapper">
+            <div class="welcome"><span><asp:Literal ID="LitGab" runat="server"></asp:Literal>&nbsp;&nbsp;&nbsp;</span><a href="" title=""><img src="images/userPic.png" alt="" /></a><span><asp:Literal  ID="LitUser" runat="server"></asp:Literal></span></div>
+            <div class="userNav">
+                <ul>
+                    <li><a href="AgendaListagem.aspx" title=""><img src="images/icons/topnav/mainWebsite.png" alt="" /><span>Agenda</span></a></li>
+                    <li><a target="_blank" href="CadManut.aspx" title=""><img src="images/icons/topnav/profile.png" alt="" /><span>Cadastro</span></a></li>
+                    <li class="dd"><a href="#" title=""><img src="images/icons/topnav/tasks.png" alt="" /><span>Demandas</span><asp:Literal ID="LitUserDem" runat="server"></asp:Literal></a>
+                        <ul class="userDropdown">
+                            <li><a href="DemandaManut.aspx?usr=1" title="" class="sAdd">Nova demanda</a></li>
+                            <li><a href="DemandaListagem.aspx?usr=1" title="" class="sInbox">Listar demandas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="RecadoListagem.aspx" title=""><img src="images/icons/topnav/messages.png" alt="" /><span>Recados</span><asp:Literal ID="LitRecQtd" runat="server"></asp:Literal></a></li>
+                    <li><a href="Login.aspx" title=""><img src="images/icons/topnav/logout.png" alt="" /><span>Sair</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="titleArea">
+        <div class="wrapper">
+            <div class="pageTitle">
+                <table><tr><td><h5><asp:Literal  ID="LitTitle" runat="server"></asp:Literal></h5></td><td width="20px"></td><td><span><asp:Literal  ID="LitSubtitle" runat="server"></asp:Literal></span></td></tr></table>
+            </div>
+        </div>
+    </div>
+    <form id="Form1" runat="server" class="form">
+    <table><tr><td width="40px"></td><td><asp:ContentPlaceHolder ID="SingleColumnContent" runat="server"></asp:ContentPlaceHolder></td></tr></table>
+    </form>
+</div>
+</body>
+</html>
